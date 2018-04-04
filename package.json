@@ -4,7 +4,10 @@
   "description": "Various Webpack setups for many usecases",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --mode=development",
+    "test": "karma start --single-run",
+    "build": "webpack --mode=production",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -16,5 +19,20 @@
   "bugs": {
     "url": "https://github.com/blacksonic/webpack-showcase/issues"
   },
-  "homepage": "https://github.com/blacksonic/webpack-showcase#readme"
+  "homepage": "https://github.com/blacksonic/webpack-showcase#readme",
+  "dependencies": {
+    "@babel/core": "^7.0.0-beta.44",
+    "@babel/preset-env": "^7.0.0-beta.44",
+    "babel-loader": "^8.0.0-beta.2",
+    "gh-pages": "^1.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jasmine-core": "^3.1.0",
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.1",
+    "karma-webpack": "^3.0.0",
+    "webpack": "^4.4.1",
+    "webpack-cli": "^2.0.13",
+    "webpack-dev-server": "^3.1.1"
+  }
 }
