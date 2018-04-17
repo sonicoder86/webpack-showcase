@@ -1,6 +1,9 @@
 
 export class ConsoleDisplay {
   display() {
-    console.log('Hello Webpack!');
+    const welcomeMessage = 'Hello Webpack!';
+
+    console.log(welcomeMessage);
+    document.body.innerHTML = welcomeMessage;
   }
 }
