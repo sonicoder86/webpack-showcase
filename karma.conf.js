@@ -12,7 +12,10 @@ module.exports = (config) => {
       'src/test.js': ['webpack']
     },
 
-    webpack: require('./webpack.config'),
+    webpack: {
+      ...require('./webpack.config'),
+      mode: 'development'
+    },
 
     reporters: ['dots'],
 
